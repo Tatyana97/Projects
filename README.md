@@ -7,7 +7,7 @@ My projects during my studies at The Rolling Scopes School
 
 [https://Tatyana97.github.io/Projects/calculator](https://Tatyana97.github.io/Projects/calculator/index.html)
 
-[https://Tatyana97.github.io/Projects/shelter](https://Tatyana97.github.io/Projects/shelter/index.html)
+[https://Tatyana97.github.io/Projects/shelter](https://Tatyana97.github.io/Projects/shelter/pages/index.html)
 
 
 
