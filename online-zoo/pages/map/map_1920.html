@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <link href="//db.onlinewebfonts.com/c/151212d9a9d1e632aa020562ae4ea050?family=SceneW01-Black" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/style-map.css">
+</head>
+<body>
+    <div class="common-gradient-header-and-watch-your-favorite-animal-online">
+    <header class="header">
+        <h1>Online Zoo</h1>
+        <div class="container">
+          <div class="common-header-navigation">
+           <div class="logo">
+             <a href="../../main.html"><img src="../../assets/icons/landing/logo.svg" alt="logo"></a>
+         </div>
+         <nav class="navigation">
+           <ul class="navigation-list">
+             <li><a href="../../main.html">About</a></li>
+             <li><a class="map" href="#">Мар</a></li>
+             <li><a href="../../pages/zoos/panda.html">Zoos</a></li>
+             <li><a href="../../pages/html/error.html">Contact us</a></li>
+             <li><a href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo?node-id=0%3A1">Design</a></li>
+           </ul>
+         </nav>
+
+         <nav class="navigations">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+              <li><a href="../main.html">About</a></li>
+              <li><a href="../pages/map/map_1920.html">Мар</a></li>
+              <li><a href="../zoos/panda.html">Zoos</a></li>
+              <li><a href="../pages/html/error.html">Contact us</a></li>
+              <li><a href="https://www.figma.com/file/aBvQMVmI665DtzprpiniuH/online-zoo?node-id=0%3A1">Design</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        </div>
+       </div>
+      </header>
+
+      <main class="main">
+        
+        <div class="container" id="wrapper">
+            <div class="main-map"><img src="../../assets/icons/landing/map.svg" alt="main-map" id="map">
+              <p class="country">USA</p>
+                <a href="../zoos/eagle.html">
+                  <div class="main-map-eagle">
+                    <span class="tooltiptext">EAGLE, California, USA</span>
+                     <p>EAGLE</p>
+                  </div>
+                </a>   
+                <a href="../zoos/alligator.html">
+                 <div class="main-map-alligator">
+                    <span class="tooltiptext">ALLIGATOR, Florida, USA</span>
+                    <p>ALLIGATOR</p>
+                  </div> 
+                </a>
+                <a href="../zoos/gorilla.html">
+                    <div class="main-map-gorilla">
+                       <span class="tooltiptext">GORILLA, Eastern DRC</span>
+                       <p>Eastern DRC</p>
+                       <div class="tooltiptext-position">GORILLA</div>
+                      </div> 
+                   </a>
+                   <a href="../zoos/panda.html">
+                    <div class="main-map-panda">
+                       <span class="tooltiptext">PANDA, China</span>
+                       <p>PANDA BEAR</p>
+                     </div> 
+                   </a>
+                   <p class="country1">China</p>
+            </div>
+            <div class="main-button">
+                <button class="minus" id="minus" onclick="zoomin()">-</button>
+                <button class="plus" id="plus" onclick="zoomout()">+</button>
+            </div>
+        </div>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-background"></div>
+      <div class="container">
+            <div class="footer-nav">
+          <div class="logo">
+            <a href="../../main.html"><img src="../../assets/icons/landing/logo.svg" alt="logo"></a>
+        </div>
+          <div class="footer-nav-button">
+            <button class="common-button">Donate for volunteers</button>
+          </div>
+          <div class="footer-nav-list">
+              <ul class="footer-nav-list-1">
+                <li><a href="../../main.html">About</a></li>
+                <li class="nav-list-position"><a href="../map/map_1920.html">Мар</a></li>
+              </ul>
+              <ul class="footer-nav-list-2">
+                <li><a href="../html/error.html">Contact us</a></li>
+                <li class="nav-list-position"><a href="#">Feedback</a></li>
+              </ul>
+          </div>
+          <div class="footer-nav-social-networks">
+            <ul class="footer-nav-social-networks-list">
+              <li><a href="https://www.instagram.com/"><div class="inst"></div></a></li>
+              <li><a href="https://www.facebook.com/"><div class="facebook"></div></a></li>
+              <li><a href="https://twitter.com/?lang=ru"><div class="twitter"></div></a></li>
+              <li><a href="https://www.youtube.com/"><div class="youtube"></div></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-author">
+         <div class="footer-author-rs-digital">
+          <div class="footer-author-rs">
+            <div title="Rolling Scopes School" class="rs"></div>
+          </div>
+        <div class="footer-author-digital-logo">
+              <div title="Yem Digital" class="digital"></div>
+        </div>  
+      </div> 
+      <div class="footer-author-text">
+        <p class="footer-author-text-1">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</p>
+        <p class="footer-author-text-2">Grigoreva Margarita</p>
+    </div> 
+  </div>
+
+  <div class="adaptive-1200-tablet">
+    <div class="footer-nav">
+      <div class="logo">
+        <a href="./main.html"><img src="../../assets/icons/landing/logo.svg" alt="logo"></a>
+    </div>
+      <div class="footer-nav-list">
+          <ul class="footer-nav-list-1">
+            <li><a href="./main.html">About</a></li>
+            <li class="nav-list-position"><a href="./pages/map/map_1920.html">Мар</a></li>
+          </ul>
+          <ul class="footer-nav-list-2">
+            <li><a href="./pages/html/error.html">Contact us</a></li>
+            <li class="nav-list-position"><a href="#">Feedback</a></li>
+          </ul>
+      </div>
+      <div class="footer-nav-button">
+        <button class="common-button">Donate for volunteers</button>
+      </div>
+      <div class="footer-nav-social-networks">
+        <ul class="footer-nav-social-networks-list">
+          <li><a href="https://www.instagram.com/"><div class="inst"></div></a></li>
+          <li><a href="https://www.facebook.com/"><div class="facebook"></div></a></li>
+          <li><a href="https://twitter.com/?lang=ru"><div class="twitter"></div></a></li>
+          <li><a href="https://www.youtube.com/"><div class="youtube"></div></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-author">
+     <div class="footer-author-rs-digital">
+      <div class="footer-author-rs">
+        <div title="Rolling Scopes School" class="rs"></div>
+      </div>
+    <div class="footer-author-digital-logo">
+          <div title="Yem Digital" class="digital"></div>
+    </div>  
+  </div> 
+  <div class="footer-nav-button">
+    <button class="common-button">Donate for volunteers</button>
+  </div>
+  </div>
+  <div class="author-text">
+    <div class="footer-author-text">
+      <p class="footer-author-text-1">Copyright ©RSSchool and ©Yem Digital 2020 - 2021</p>
+      <p class="footer-author-text-2">Grigoreva Margarita</p>
+    </div> 
+  </div>
+  </div>
+
+     </footer>
+     <script src="../map/map.js"></script>  
+</body>
+</html>

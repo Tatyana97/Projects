@@ -1,0 +1,586 @@
+
+          $main-color: #70cb0e;
+          $button:#FFE68E;
+          $white: #FFFFFF;
+          $black:#000000;
+          $testimonials:#A7E1FF;
+          $footer:#DFF5B0;
+
+          @font-face {
+            font-family: Roboto; 
+            src: url(../assets/fonts/Roboto-Bold.ttf);
+            font-family: Roboto-standart; 
+            src: url(../assets/fonts/Roboto-Regular.ttf);
+           } 
+           @font-face {font-family: SceneW01-Black;
+            src: url("http://db.onlinewebfonts.com/t/151212d9a9d1e632aa020562ae4ea050.eot"); /* IE9*/
+            src: url("http://db.onlinewebfonts.com/t/151212d9a9d1e632aa020562ae4ea050.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+            url("http://db.onlinewebfonts.com/t/151212d9a9d1e632aa020562ae4ea050.woff2") format("woff2"), /* chrome firefox */
+            url("http://db.onlinewebfonts.com/t/151212d9a9d1e632aa020562ae4ea050.woff") format("woff"), /* chrome firefox */
+            url("http://db.onlinewebfonts.com/t/151212d9a9d1e632aa020562ae4ea050.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+            url("http://db.onlinewebfonts.com/t/151212d9a9d1e632aa020562ae4ea050.svg#SceneW01-Black") format("svg"); /* iOS 4.1- */
+        }
+           @mixin button{
+               background: $button;
+               // height: 4.73em;
+               // width: 63px;
+               border-radius: 3em;
+           }
+           @mixin button-inside{
+            background-size: 100%;
+            width: 1em;
+            height: 2em;
+            margin: 14px;
+        }
+        @mixin button-standart{
+         background: $main-color;
+         padding: 15px 60px;
+         color: $black;
+         font-size: 18px;
+         border-radius: 2em;
+         width: 15.9em;
+         margin: 0 auto;
+         display: flex;
+     }
+     @mixin social {
+      background-repeat: no-repeat;
+      background-position-x: center;
+      width: 2.5em;
+      height: 2.5em;
+      background-size: 100%;
+     }
+     @mixin footer-author {
+      background-repeat: no-repeat;
+      background-size: 99%;
+     }
+
+     button:hover{
+      cursor: pointer;
+     }
+
+
+         body{
+            margin: 0 auto;
+            padding: 0;
+            font-family: Roboto-standart;
+            max-width: 1920px;
+            font-size: 16px;
+         }
+         a {
+            text-decoration: none;
+        }
+        
+        ul{
+            list-style-type: none;
+        }
+        
+        button {
+            border: none;
+            outline: none;
+        }
+
+        .container{
+         padding: 0 23.75em;
+      }
+
+      .common-gradient-header-and-watch-your-favorite-animal-online{
+         background: url("../assets/images/landing/main-background.png");
+         background-size: auto;
+         height: 100%;
+      }
+      h1{
+         position: absolute;
+         top: -999999em;
+         left: auto;
+         width: 1px;
+         height: 1px;
+         overflow:hidden;
+       }
+
+      h2 {
+         font-size: 2.98em;
+         font-style: normal;
+         font-weight: 600;
+         line-height: 45px;
+         text-align: center;
+         letter-spacing: -3px;
+      }
+         
+
+
+      //header
+      .header{
+         padding-top: 12px;
+      }
+      .common-header-navigation{
+         display: flex;
+         margin-bottom: -1em;
+      }
+      .navigation{
+         
+         .navigation-list{
+            display: flex;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            padding-left: 1.31em;
+         }
+         li{
+            margin: 0px 0 0 1.945em;
+         }
+         li:first-child{
+            text-shadow: $main-color -2px 0px 3px;
+            pointer-events: none;
+         }
+
+         a{
+            color: #000000;
+            font-weight: bold;
+         }
+      }
+
+      //main 
+      //watch-your-favorite-animal-online
+      .main{
+         padding-bottom: 9em;
+      }
+      section.watch-your-favorite-animal-online {
+            display: flex;
+            position: relative;
+            margin: 0 23.75em;
+            position: relative;
+            bottom: -1em;
+            img{
+               max-width: 84%;
+               position: relative;
+               top: -1em;
+               right: 5.4em;
+           }
+            
+      }
+      .favorite-animal-online{
+         display: flex;
+         flex-direction: column;
+         h2{
+            font-family: SceneW01-Black;
+            font-style: normal;  
+            font-weight: 900;
+            font-size: 4.38em;
+            line-height: 120%;
+            letter-spacing: 0.03em;
+            width: 8.15em;
+            text-align: left;
+            margin-top: 1.97em;
+         }
+         button{
+            background: $main-color;
+            border-radius: 2em;
+            width: 17.48em;
+            padding: 1.13em 4.5em;
+         }
+         .play{
+            background: url('../assets/icons/landing/play.svg');
+            background-size: 22%;
+            background-repeat: no-repeat;
+            margin: 0px 18px;
+            font-size: 18px;
+         }
+      }
+      //how-it-works
+      .how-it-works{
+         margin: 6.3em 0;
+         position: relative;
+      
+         h2{
+            margin-bottom: 3.2em;
+         }
+         p{
+            max-width: 933px;
+            line-height: 21px;
+            text-align: center;
+            margin: 4.7em auto;
+            
+         }
+      }
+      .how-it-works-background{
+         background: url('../assets/images/landing/yellow-top.png');
+         background-repeat: no-repeat;
+         background-size: 100%;
+         width: 769px;
+         height: 8em;
+         position: absolute;
+         top: 5em;
+         right: 18em;
+         z-index: 0;   
+      }
+      .how-it-works-background2{
+         background: url('../assets/images/landing/yellow-bottom.png');
+         background-size: 100%;
+         background-repeat: no-repeat;
+         width: 805px;
+         height: 18em;
+         position: absolute;
+         top: 20em;
+         left: 15em;
+         z-index: 0;
+      }
+      .how-it-works-block-image{
+         margin: 0 auto;
+         ul{
+            display: flex;
+            justify-content: center;
+         }
+         li{
+            img{
+               width: 90%;
+               height: 94%;
+               margin: 8px -1.1em;
+            }
+         }
+
+         li:nth-child(1) {
+            position: relative;
+            top: -2em;
+            left: 4.5em;
+            z-index: 1;
+         }
+         li:nth-child(2) {
+            position: relative;
+            top: -2em;
+            transform: scale(1.1);
+            z-index: 2;
+         }
+         li:nth-child(4) {
+            position: relative;
+            top: -2em;
+            transform: scale(1.1);
+            z-index: 2; 
+         }
+         li:nth-child(3) {
+            position: relative;
+            top: -2em;
+            transform: scale(1.2);
+            z-index: 3; 
+         }
+         li:nth-child(5) {
+            position: relative;
+            top: -2em;
+            right: 4.5em;
+            z-index: 1;
+         }
+      }
+   
+
+
+      //pets-in-zoo
+      .pets-in-zoo{
+         margin: 11.3em 0;
+      }
+      .common-button{
+         @include button-standart();
+         margin-top: 2em;
+      }
+      .pets-in-zoo-portfolio{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin-top: 5em;
+      }
+
+      .arrow-left-arrow-right{
+            @include button();
+      }
+      .arrow-left{
+         background-image: url("../assets/icons/landing/left.svg");
+         @include button-inside();
+      }
+      .arrow-right{
+         background-image: url("../assets/icons/landing/right.svg");
+         @include button-inside();
+      }
+      .pets-in-zoo-container{
+             display: grid;
+             justify-content: center;
+             grid-template-columns: 26% 26% 26% 26%;
+             grid-template-rows: 1fr 1fr;
+             gap: 28px 6px;
+             padding: 0 3em;
+      }
+
+      .pets-in-zoo-container-image-block{
+         position: relative;
+         width: 100%;
+         transition: 1s;
+         img{
+            width: 95%;
+         }
+
+         p{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            color: $white;
+         }
+      }
+      .pets-in-zoo-container-image-block img:hover{
+         transform: scale(1.1);
+         cursor: pointer;
+      }
+
+//pay-and-feed
+.pay-and-feed{
+   margin: 6.3em 0 6em;
+}
+
+.pay-and-feed-block{
+   display: flex;
+   justify-content: center;
+}
+
+.block-size{
+   max-width: 320px;
+
+   p{
+      text-align: center;
+      color: $black;
+   }
+}
+.arrow-top-bottom{
+   margin: 0;
+   position: absolute;
+   top: -12em;
+   left: 13em;
+}
+.pay-and-feed-block__card{
+   position: relative;
+}
+.pay-and-feed-block__bank{
+   margin: 0 46px;
+}
+p.card-position{
+   position: relative;
+   top: -10px;
+}
+
+//testimonials
+.testimonials{
+   margin: 6.3em 0 6.3em;
+
+   .common-button{
+      width: 246px;
+      padding: 15px 59px;
+   }
+}
+.testimonials-block{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 80px 0 50px;
+}
+.testimonials-block-grid{
+   display: grid;
+   grid-template-columns: 233px 233px 233px 233px;
+   grid-column-gap: 20px;
+   margin: 0 20px;
+}
+
+.testimonials-block-reviews{
+   background: #A7E1FF;
+   display: flex;
+   flex-direction: column;
+   padding: 20px 20px 0 20px;
+}
+.block-reviews-title{
+   display: flex;
+   flex-direction: revert;
+   img{
+      height: 52px;
+   }
+}
+.reviews-title{
+   display: flex;
+   flex-direction: column;
+   padding: 0.6em;
+   p{
+      margin: 0;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 120%;
+   }
+}
+.money{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   img{
+      height: 8.31px;
+      background: #FFB600;
+   }
+     p{
+      font-size: 12px;
+     } 
+}
+//footer
+.footer{
+   background: $footer;
+   img{
+      width: 88%;
+   }
+}
+.footer-nav{
+
+   padding-top: 2em;
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 59px;
+
+   .logo{
+      height: 50px;
+   }
+   .footer-nav-button{
+      padding-right: 6em;
+      .common-button{
+         width: 230px;
+         padding: 14px 28px;
+         margin: 0;
+      }
+      }
+   }
+
+   .footer-nav-list{
+      display: flex;
+      width: 16.2em;
+      justify-content: space-between;
+
+         ul{
+            padding: 0;
+            margin: 0;
+            padding-right: 27px;
+         }
+         li{
+            font-size: 18px;
+            line-height: 26px;
+         }
+         a{
+            color: $black;
+         }
+   }
+   .footer-nav-list-1 {
+      position: relative;
+      right: 22px;
+  }
+   .nav-list-position{
+      padding-top: 0.5em;
+   }
+   .footer-nav-social-networks{
+      .footer-nav-social-networks-list{
+         margin: 0;
+         padding: 0;
+         display: flex;
+         flex-direction: row;
+      }
+      li{
+         background: $black;
+         border-radius: 25px;
+         margin-left: 11px;
+         width: 39px;
+
+         .inst{
+            background-image: url('../assets/icons/landing/instagram.svg');
+               @include social();    
+               background-position-y: 3px;
+               background-position-x: 3px;
+               width: 2.2em;
+               height: 2.5em;
+               background-size: 95%;
+         }
+         .facebook{
+            background-image: url('../assets/icons/landing/f.svg');
+            @include social();
+            margin: 0 auto;
+            width: 1.5em;
+            background-size: 73%;
+            background-position-y: 5px;
+         }
+         .twitter{
+            background-image: url('../assets/icons/landing/t.svg');
+            @include social();
+            background-size: 66%;
+            background-position-y: center;
+         }
+         .youtube{
+            background-image: url('../assets/icons/landing/youtube.svg');
+            @include social();
+            background-position-y: center;
+            background-size: 66%;
+         }
+      }
+      
+   }
+
+   .footer-author{
+      display: flex;
+      padding-bottom: 20px;
+      p{
+         font-size: 18px;
+         line-height: 21px;
+         position: relative;
+         top: 10px;
+         margin: 0;
+      }
+   }
+   .footer-author-rs{
+      a{
+         display: flex;
+         align-items: baseline;
+      }
+      .rs{
+         background-image: url('../assets/icons/landing/rs.png');
+         @include footer-author();
+         width: 8.8em;
+         height: 3.3em;
+      }
+      }
+   
+   .footer-author-digital-logo{
+      .digital{
+         background-image: url('../assets/icons/landing/digital.svg');
+         @include footer-author();
+         width: 6em;
+         height: 3em;
+      }
+      }
+      .footer-author-rs-digital{
+              width: 18.5em;
+               display: flex;
+             justify-content: space-between;
+      }
+
+   .footer-author-text{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      top: 4px;
+      left: 4.8em;
+
+      .footer-author-text-1 {
+         padding-right: 11.8em;
+     }
+
+   }
+
+   .footer-background{
+      background: url("../assets/icons/landing/footer-backgraound.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      position: relative;
+      margin: 0 auto;
+      top: -1.5em;
+      height: 3em;
+   }
+
+  
