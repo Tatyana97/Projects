@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  body {
+    max-width: 1280px;
+    margin: 0 auto;
+    background: url(noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  a {
+    list-style-type: none;
+    text-decoration: none;
+  }
+  
+  .logo, .our-friends-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button,
+  button:active,
+  button:focus {
+    outline: none;
+  }
+  
+  
+  h1 {
+    visibility: hidden;
+    position: absolute;
+  }
+  
+  .common-header-not-only-background {
+    background: white;
+  }
+  
+  .header {
+    padding: 1.9rem 2.5rem;
+    padding-bottom: 1.3rem;
+  }
+  
+  .wrapper {
+    display: flex;
+    margin: 0 auto;
+    max-width: 75rem;
+    justify-content: space-between;
+  }
+  
+  .logo__title {
+    color: #545454;
+    font-family: Georgia;
+    font-size: 1.8rem;
+    line-height: 98%;
+    letter-spacing: 0.24rem;
+  }
+  
+  .logo__subtitle {
+    font-family: Arial;
+    color:  #545454;
+    font-size: 0.8125rem;
+    line-height: 110%;
+    letter-spacing: 0.1em;
+    padding: 0.8rem 0.22rem;
+  }
+  
+  .menu {
+    display: flex;
+    width: 443px;
+  }
+  .menu .menu-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .menu .menu-list li {
+    font-family: Arial;
+    font-size: 0.94rem;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  .menu .list-first a {
+    padding-top: 4px;
+    color:  #545454;
+  }
+  .menu .list-first a:hover {
+    color:  #545454;
+    border-bottom: solid 3px #F1CDB3;
+  }
+
+  .menu .header-container__link_active {
+    color:  #545454;
+    border-bottom: 3px solid #f1cdb3;
+  }
+  .menu .list-second a {
+    color:  #545454;
+  }
+  .menu .list-second a:hover {
+    color:  #545454;
+    border-bottom: solid 3px #F1CDB3;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .our-friends {
+    background: #F6F6F6;
+  }
+  
+  .our-friends-content-list {
+    display: flex;
+    flex-direction: row;
+    padding: 0rem 2.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sleder-button, .sleder-button-reverted {
+    border: none;
+    background: #F6F6F6;
+    width: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    border-radius: 10rem;
+    border: 2px solid #f1cdb3;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 100px;
+  }
+  .sleder-button:hover, .sleder-button-reverted:hover {
+    background: #FDDCC4;
+    border: #FDDCC4;
+  }
+  
+  .hero-button-2 {
+    font-family: Georgia;
+    width: 188px;
+    height: 51px;
+    letter-spacing: 0.7px;
+    border: 2px solid #f1cdb3;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 100px;
+    margin-top: 1.6rem;
+    font-size: 17px;
+    color: #292929;
+  }
+  .hero-button-2:hover {
+    background: #FDDCC4;
+    border: #FDDCC4;
+  }
+  
+  .slider-box {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pets__cards {
+    background: #FAFAFA;
+    max-width: 270px;
+    margin: 0rem 1.3rem;
+  }
+  .pets__cards:hover .pets__card-content {
+    background: #FFFFFF;
+  }
+  
+  .pets__card-content {
+    text-align: center;
+    background: #FAFAFA;
+    padding-bottom: 1.9rem;
+  }
+  
+  .pets__cards.position {
+    margin-left: 2.6rem;
+  }
+  
+  .our-friends-content h3 {
+    font-family: Georgia;
+    font-size: 2.19rem;
+    font-weight: 400;
+    line-height: 130%;
+    color: #545454;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: #F6F6F6;
+    padding: 5rem 0rem 3.5rem;
+    letter-spacing: 0.06em;
+  }
+  
+  .pets__card-content h4 {
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    color: #545454;
+    padding-top: 1.3rem
+  }
+.line-1{
+    margin-bottom: 1.8rem;
+}  
+.line-2{
+    margin-bottom: 1.8rem;
+}  
+
+.our-friends-content-list-buttons {
+    display: flex;
+    display: flex;
+    column-gap: 1.6rem;
+    justify-content: center;
+}
+ .button_place_slider-buttons {
+    width: 5.2rem;
+    margin-top: 6rem;
+    border-radius: 100%;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: 0.12rem;
+    word-spacing: -0.5rem;
+}
+.button:disabled {
+    background-color: transparent; 
+    border: 2px solid #cdcdcd;
+}
+.button_place_slider-buttons.disabled:hover{
+  background-color: transparent; 
+  border: 2px solid #cdcdcd;
+  cursor: auto;
+}
+.button {
+    height: 3rem;
+    width: 2.9rem;
+    border: 2px solid #f1cdb3;
+    outline: none;
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 1.9rem 0rem 6.3rem;
+}
+.button_place_slider-buttons:hover{
+    background-color: #f1cdb3;
+    border: 2px solid #f1cdb3;
+}
+
+  
+  footer {
+    background: url(noise_lines_transparent.png), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), #211F20;
+  }
+  
+  .footer__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.7rem 2.5rem 0em;
+  }
+  
+  .footer__questions, .footer__visit {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer__visit {
+    margin-left: -0.6rem;
+  }
+  
+  .email-photo {
+    margin-bottom: 2.8rem;
+  }
+  
+  .map-point {
+    margin-bottom: 2.14rem;
+  }
+  
+  .footer__questions h3, .footer__visit h3 {
+    font-family: Georgia;
+    font-size: 2.19rem;
+    font-weight: 400;
+    line-height: 130%;
+    color: #545454;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    letter-spacing: 0.06em;
+    margin: 1rem 0rem 2.7rem;
+  }
+  
+  .footer__visit h3 {
+    margin-bottom: 2.1rem;
+  }
+  
+  .footer__content div, .map-point span {
+    display: flex;
+  }
+  
+  .footer__content div img {
+    margin-right: 1.3rem;
+  }
+  
+  .footer__content div a {
+    color: #F1CDB3;
+    font-family: Georgia;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 115%;
+    letter-spacing: 0.06em;
+  }
+  
+  .footer__photo-dog {
+    background-image: url(/../assets/images/footer-puppy.png);
+    width: 18.8rem;
+    height: 19.4rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+
+  
