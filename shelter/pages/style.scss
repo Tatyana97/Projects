@@ -1,0 +1,757 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ 
+$color-light-s: #FAFAFA;
+$color-light-l: #F6F6F6;
+$color-light-xl: #FFFFFF;
+$color-dark-s: #CDCDCD;
+$color-dark-m: #B2B2B2;
+$color-dark-l: #545454;
+$ccolor-dark-xl: #4C4C4C;
+$color-dark-2xl: #444444;
+$color-dark-3xl: #292929;
+$color-primary: #F1CDB3;
+$color-primary-light: #FDDCC4;
+$start-screen-gradient-background: #292929;
+
+@mixin commonGradient(){
+    background: url(noise_lines_transparent.png), 
+    radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%), 
+    #211F20;
+}
+
+
+@mixin h2 {
+       font-family: Georgia; 
+       font-size: 2.75rem;
+       font-weight: 400;
+       line-height: 130%;
+}
+@mixin h3 {
+    font-family: Georgia; 
+    font-size: 2.19rem;
+    font-weight: 400;
+    line-height: 130%;
+    color: $color-dark-l;
+}
+@mixin h4 {
+    font-family: Georgia; 
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 115%;
+    color: $color-dark-l;
+    letter-spacing: 0.06em;
+}
+
+@mixin standart-p {
+    font-family: Arial; 
+    font-size: 0.94rem;
+    font-weight: 400;
+    line-height: 160%;
+}
+@mixin content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 72rem;
+}
+@mixin button {
+    border: 2px solid #f1cdb3;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+body{
+    max-width: 1280px;
+    margin: 0 auto;
+     @include commonGradient();
+}
+li{
+    list-style-type: none;
+}
+a{
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.logo, .our-friends-content{
+    display: flex;
+    flex-direction: column;
+  
+}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+
+.about, .help{
+    background: #FFFFFF;
+}
+
+
+.container_768{
+    display: none;
+}
+
+.hamburger-menu{
+    display: none;
+  }
+  .container_320{
+    display: none; 
+  }
+
+
+//header
+h1 {
+    visibility: hidden;
+    position: absolute;
+}
+.common-header-not-only-background{
+    @include commonGradient;
+}
+.header{
+    padding: 4rem 2.5rem;
+    padding-bottom: 2.8rem;
+}
+.wrapper{
+    display: flex;
+    margin: 0 auto;
+    max-width: 75rem;
+    justify-content: space-between;
+}
+
+
+    .logo__title{
+        color: $color-primary;
+        font-family: Georgia;
+        font-size: 1.8rem;
+        line-height: 98%;
+        letter-spacing: 0.24rem;
+    }
+        .logo__subtitle{
+            font-family: Arial;
+            color: $color-light-xl;
+            font-size:  0.8125rem;
+            line-height: 110%;
+            letter-spacing: 0.1em;
+            padding: 0.8rem 0.22rem;
+        }
+
+.menu{
+    display: flex;
+    width: 443px ;
+
+    .menu-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .menu-list li{
+        @include standart-p;
+        
+    }
+
+    .list-first a{
+        padding-top: 4px;
+        color: $color-light-s;
+    }
+
+    .header-container__link_active{
+        color: #fafafa;
+        border-bottom: 3px solid #f1cdb3;
+    }
+
+    .list-second a{
+        color: $color-dark-s;
+        &:hover {
+            color: $color-light-s;
+            border-bottom: solid 3px $color-primary;
+          }
+    }
+}
+
+
+
+//section not-only
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2.5rem;
+}
+
+.not-only{
+    margin: 0 auto;
+    max-width: 75rem;
+    display: flex;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 10.4rem;
+}
+.hero{
+    h2{
+        color: $color-light-xl;
+        @include h2;
+        max-width: 19.375rem;
+    }
+    p{
+    margin-top: 2.8rem;
+    color: $color-dark-s;
+    @include standart-p;
+    }
+    
+}
+.hero-button{
+    padding: 15px 45px;
+    margin-top: 2.4rem;
+    width: 207px;
+    background: $color-primary;
+    border-radius: 100px;
+    border: none;
+    @include standart-p;
+    letter-spacing: 1.8px;
+    color: $color-dark-3xl;
+    cursor: pointer;
+    &:hover {
+       background: #FDDCC4;
+      }
+}
+.hero-image{
+    padding-left: 2em;
+    height: 100%;
+}
+
+
+//section about
+
+.about-content{
+    display: flex;
+    margin: 5.1rem 11rem 6rem;
+}
+.about__content-text{
+    max-width: 430px;
+    margin: 0.9rem 0rem 0rem 7.5rem;
+    h3{
+    @include h3;
+    max-width: 23rem;
+    letter-spacing: 2px;
+    margin-bottom: 1.4rem;
+    }
+    p:first-of-type{
+        margin-bottom: 1.6rem;
+    }
+    p{
+        @include standart-p;
+    }
+}
+
+//section our-friends
+.our-friends{
+    background: $color-light-l;
+}  
+
+.our-friends-content-list{
+    display: flex;
+    flex-direction: row;
+    padding: 0rem 2.5rem;
+    align-items: center;
+
+    //!
+    position: relative;
+    overflow: hidden;
+}
+
+
+ //! 
+ .slider {
+    position: relative;
+    overflow: hidden;
+    padding: 0rem 5.6rem;
+  }
+
+  .slider__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+  }
+
+  .slider__item {
+    flex: 0 0 33.333333%;
+    max-width: 34.6%;
+  }
+
+  .slider__control {
+    position: absolute;
+    top: 50%;
+    border: none;
+    background: #F6F6F6;
+    width: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    border-radius: 10rem;
+    margin: 0.1rem 2.5rem;
+    @include button;
+    &:hover {
+        background: #FDDCC4;
+        border: #FDDCC4;
+       }
+    transform: translateY(-50%);
+
+  }
+
+  .slider__control_show {
+    display: flex;
+  }
+
+  .slider__control:hover,
+  .slider__control:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: .9;
+  }
+
+  .slider__control_left {
+    left: 0;
+  }
+
+  .slider__control_right {
+    right: 0;
+  }
+
+ 
+
+
+
+
+
+//!
+.pets__cards.position-2 {
+    padding-right: 1.7rem;
+}
+
+
+.sleder-button, .sleder-button-reverted {
+    border: none;
+    background: #F6F6F6;
+    width: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    border-radius: 10rem;
+    @include button;
+    &:hover {
+        background: #FDDCC4;
+        border: #FDDCC4;
+       }
+}
+
+.hero-button-2{
+    font-family: Georgia;
+    width: 188px;
+    height: 51px;
+    letter-spacing: 3px;
+    @include button;
+    margin-top: 1.59rem;
+    color: #292929;
+    &:hover {
+        background: #FDDCC4;
+        border: #FDDCC4;
+       }
+} 
+
+.pets__cards{
+    background: $color-light-s;
+    max-width: 270px;
+    margin: 0rem 3rem;
+    &:hover{
+        .pets__card-content{
+            background: #FFFFFF;
+        }
+    }
+}
+
+.pets__card-content{
+text-align: center;
+background: $color-light-s;
+padding-left: 0.8rem;
+padding-bottom: 1.9rem;
+}
+.pets__cards.position {
+    margin-left: 2.6rem;
+}
+
+.our-friends-content h3{
+    @include h3();
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background: $color-light-l;
+    padding: 5rem 0rem 3.5rem;
+    letter-spacing: 0.06em;
+}
+.pets__card-content h4{
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    color: #545454;
+    padding-top: 1.3rem;
+}
+.our-friends-content form{
+    margin: 0 auto 6rem;
+}
+.pets__button{
+    @include button();
+    width: 16.1rem;
+    margin-top: 3.6rem;
+    background: #f1cdb3;
+    height: 3.5rem;
+    outline: none;
+    font-family: Georgia;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    letter-spacing: 0.09em;
+    &:hover {
+        background: #FDDCC4;
+        border: #FDDCC4;
+       }
+}
+.position-pet {
+    margin-left: 2.2rem;
+    
+}
+.position-pet-1{
+    flex: 0 0 37.8%;
+    max-width: 38.6%;
+}
+
+
+//section help
+
+
+.help__content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 72rem;
+}
+
+.help__content h3{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin: 5rem 0rem 4rem;
+    @include h3();
+}
+.help-list{
+    display: flex;
+    justify-content: space-around;
+}
+.another-column{
+    margin: 3.7rem 5.5rem 6rem;
+    align-items: flex-end;
+}
+.help-list li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.help-list h4{
+    @include h4();
+    padding-top: 1.7rem;
+}
+
+//section  In addition
+.in_addition{
+    background: #F6F6F6;
+}
+    .in_addition__content{
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        padding: 5.2em 5.3em 5.9em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .in_addition-photo{
+        background-image: url(../assets/images/donation-dog.png);
+        height: 17rem;
+        width: 31.3rem;
+        margin-right: 2em;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-image: source slice width outset grow repeat;
+    }
+    
+    .in_addition__block{
+        display: flex;
+        flex-direction: column;
+        max-width: 23.6rem;
+        h3{
+          @include h3();
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 1.2rem;
+          font-size: 2.2rem;
+          letter-spacing: 0.06em;
+        }
+        h5{
+            @include h4();
+            color: #545454;
+            font-size: 15px;
+            letter-spacing: 0.06em;
+            margin-bottom: 1.3rem;
+        }
+        .bank-number{
+    color: #545454;
+    display: flex;
+    flex-direction: row;
+    background: #F1CDB3;
+    padding: 5px 15px;
+    border-radius: 9px;
+    border: #F1CDB3;
+    margin-bottom: 1.2rem;
+    margin-right: auto;
+    &:hover{
+        background: #FDDCC4;
+    }
+        }
+        .bank-number a{
+            display: flex;
+            text-decoration: none;
+        }
+        .bank-number-card{
+            margin-right: 1rem;
+        }
+        .bank-number p{
+            display: flex;
+            font-size: 1.156rem;
+            font-family: Georgia, serif;
+            font-weight: normal;
+            line-height: 2.3rem;
+            letter-spacing: 0.12rem;
+            color: #545454;
+        }
+        p{
+            @include standart-p();
+            font-size: 12px;
+             color: #B2B2B2;
+             font-style: italic;
+        }
+        .number-coont{
+            display: flex;
+            font-size: 2rem;
+            font-family: Georgia, serif;
+            font-weight: normal;
+            line-height: 2.3rem;
+            letter-spacing: 0.12rem;
+            color: #545454;
+        }
+    }
+
+    //footer
+    footer{
+        @include commonGradient();
+    }
+    .footer__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3rem 2.5rem 0em;
+    }
+    .footer__questions, .footer__visit{
+        display: flex;
+        flex-direction: column; 
+    }
+    .footer__visit {
+        margin-left: -0.6rem;
+    }
+.email-photo{
+    margin-bottom: 2.8rem;
+}
+.map-point{
+    margin-bottom: 2.14rem;
+}
+    .footer__questions h3, .footer__visit h3{
+        @include h3();
+        display: flex;
+        flex-direction: column;
+        color: #FFFFFF;
+        letter-spacing: 0.06em;
+        margin: 1rem 0rem 2.7rem;
+    }
+    .footer__visit h3{
+       margin-bottom: 2.1rem; 
+    }
+
+    .footer__content div, .map-point span{
+       display: flex;
+    }
+    .footer__content div img{
+        margin-right: 1.3rem;
+     }
+    .footer__content div a{
+        color: #F1CDB3;
+        font-family: Georgia;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 115%;
+        letter-spacing: 0.06em;
+    }
+
+    .footer__photo-dog{
+        background-image: url(../assets/images/footer-puppy.png);
+        width: 18.8rem;
+        height: 19.4rem;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    
+    // popup
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 900px;
+  max-width: 80%;
+  background: #FAFAFA;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.close-button {
+  outline: none;
+  background: none;
+  font-size: 2rem;
+  font-weight: bold;
+  @include button();
+  position: relative;
+  top: -2.6rem;
+  left: 29.3rem;
+  width: 3.4rem;
+  height: 3.2rem;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: -0.3rem;
+
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal-image{
+ background-repeat: no-repeat;
+ background-size: cover;
+ background-position-y: -2rem;
+}
+.modal-image.img{
+    background-image: url('../assets/images/cat-katrine.png');
+    width: 56%;
+}
+.modal-description {
+    width: 43%; 
+    text-align: left;
+
+    h3{
+        background: none;
+        padding: 1rem 1.8rem 1rem;
+        text-align: left;
+        color: #000000;
+    }
+    
+    h4{
+        color: black;
+        margin-left: 1.84rem;
+        position: relative;
+        top: -2.2rem;
+    }
+
+    p{
+        font-family: Georgia;
+        font-size: 15px;
+        line-height: 110%;
+        letter-spacing: 0.06em;
+        color: #000000;
+        margin-left: 1.7rem;
+        margin-bottom: 2.7rem;
+    }
+
+    .modal-description-list{
+        margin-left: 2.7rem;
+        margin-bottom: 3.5rem;
+    }
+    .modal-description-list li{
+       list-style-type: disc; 
+       color: $color-primary;
+       font-family: Georgia;
+       font-size: 1rem;
+       line-height: 2rem;
+       letter-spacing: 0.06em;
+    }
+    .modal-description-list li span, .modal-description-list b{
+        color: #000000;
+      }
+
+}

@@ -1,0 +1,256 @@
+@media (max-width:768px){
+
+.hamburger-menu{
+    display: flex;
+    padding: 1rem 2.5rem;
+}
+
+.menu{
+    display: none;
+}
+
+#menu__toggle {
+    opacity: 0;
+  }
+  
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  
+  .menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    width: 29px;
+    height: 26px;
+    padding-top: 2.5rem;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+  
+    width: 100%;
+    height: 2px;
+  
+    background-color: #F1CDB3;
+  
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+  
+    width: 300px;
+    height: 100%;
+  
+    margin: 0;
+    padding: 80px 0;
+  
+    list-style: none;
+  
+    background-color: #292929;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  
+    transition-duration: .25s;
+  }
+  
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+  
+    color: #CDCDCD;
+  
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+  
+    text-decoration: none;
+  
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    color: #FAFAFA;
+    border-bottom: 3px solid #f1cdb3;
+  }
+
+  .header {
+    padding: 2.2rem 0.7rem;
+    padding-bottom: 2.8rem;
+    max-width: 48rem;
+}
+.wrapper{
+    justify-content: end;
+}
+.hero{
+    padding-left: 1.3rem;
+    text-align: left;
+}
+.hero h2 {
+    font-size: 1.6rem;
+    line-height: 130%;
+    max-width: 12rem;
+    margin-right: 5.1rem;
+    text-align: center;
+}
+.hero p {
+    margin-top: 2.5rem;
+    max-width: 19rem;
+    margin-left: -3rem; 
+}
+
+.hero-image {
+    padding-left: 0em;
+    height: 16.7rem;
+    width: 18rem;
+    padding-right: 1rem;
+}
+.hero-button {
+    margin: 2.6rem auto 6.7rem;
+    margin-right: 4rem;
+    width: 205px;
+}
+.about-content{
+    margin: 1.7rem 0.4rem 2.3rem;
+}
+.about__content-text {
+    max-width: 16rem;
+    margin: 1rem 0rem 0rem 1.2rem;
+}
+
+.about__content-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+    margin-left: 1rem;
+    text-align: center;
+}
+.about__image {
+    margin: 0rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+}
+.about__image img{
+    height: 22.2rem;
+}
+
+.our-friends-content h3 {
+    padding: 2.6rem 0rem 2.3rem;
+    margin-right: 0rem;
+    margin-left: 0rem;
+    font-size: 1.5rem;
+    max-width: 20rem;
+}
+.slider__item{
+    flex: 1 0 129%;
+    max-width: 121%;
+    margin: 0 1rem;
+}
+.pets__cards {
+    margin: 0rem -5.4rem;
+}
+.pets__card-content h4 {
+    padding-top: 1.5rem;
+}
+
+.our-friends-content form {
+    margin: 3.5rem 0.6rem 2.4rem;
+}
+.help__content h3 {
+    font-size: 1.5rem;
+    margin: 2.7rem 0rem 2.6rem;
+}
+.container_768{
+    display: none;
+}
+.container_320{
+    justify-content: center;
+    width: 34.6rem;
+    text-align: center;
+}
+.help-list_320{
+    margin: 4.2rem 0 0;
+}
+.help__content {
+    padding-bottom: 37.5rem;
+}
+.in_addition__block h3 {
+    font-size: 1.5rem;
+    width: 13rem;
+    margin-left: 2rem;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+.in_addition__content {
+margin: 0rem;
+max-width: 24rem;
+padding: 2.6rem 1rem 1rem 1rem;
+margin-left: 0.4rem;
+}
+
+.in_addition-photo {
+    margin: 0rem;
+    width: 16.3rem;
+    height: 14rem;
+    margin-right: 4.7rem;
+    margin-bottom: -1.5rem;
+}
+.in_addition__block .bank-number p {
+    line-height: 2.3rem;
+    font-size: 0.8rem;
+}
+.in_addition__block .bank-number {
+    margin-bottom: 1.2rem;
+}
+.in_addition__block {
+    max-width: 23.6rem;
+    margin-bottom: 1rem;
+}
+.footer__questions h3, .footer__visit h3{
+    font-size: 1.5rem;
+}
+
+.footer__content {
+    margin: 0rem 0rem 0rem 2.5rem;
+    text-align: center;
+}
+.footer__photo-dog {
+    width: 15rem;
+    height: 15.4rem;
+    margin-top: 4.5rem;
+    margin: 0rem;
+}
+.footer__visit {
+    left: 0rem;
+    margin-top: 1.6rem;
+}
+    
+}
