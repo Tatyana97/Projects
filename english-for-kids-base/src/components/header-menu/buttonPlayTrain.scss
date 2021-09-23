@@ -1,0 +1,229 @@
+
+body {
+  font-family: 'Concert One', cursive;
+  font-size: 2rem;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+svg {
+  display: none;
+}
+header {
+  display: inline;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1em;
+}
+
+.tabber {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+
+  label {
+    user-select: none;
+    padding: 1.3rem;
+    cursor: pointer;
+    will-change: transform;
+    transform: translateZ(0px);
+    transition:
+      transform 125ms ease-in-out,
+      filter 125ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+
+    &#t1 ~ .blob {
+      transform-origin: right center;
+    }
+
+    &#t2 ~ .blob {
+      transform-origin: left center;
+    }
+
+    &#t1:checked {
+
+      ~ .blob {
+        background: cornflowerblue;
+        animation-name: stretchyRev;
+      }
+    }
+
+    &#t2:checked {
+
+      ~ .blob {
+        background-color: skyblue;
+        animation-name: stretchy;
+      }
+    }
+  }
+
+  .blob {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 4rem;
+    animation-duration: .5s;
+    animation-direction: forwards;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition:
+      transform 150ms ease,
+      background 150ms ease;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\"><defs><filter id=\"goo\"><feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"10\" result=\"blur\" /><feColorMatrix in=\"blur\" mode=\"matrix\" values=\"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9\" result=\"goo\" /><feComposite in=\"SourceGraphic\" in2=\"goo\" operator=\"atop\"/></filter></defs></svg>#goo");
+
+    &:before, &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      background-color: inherit;
+      height: 100%;
+      width: 50%;
+      border-radius: 100%;
+      transform: scale(1.15);
+      transition: transform 150ms ease;
+      animation-name: pulse;
+      animation-duration: .5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    &:before {
+      left: 0;
+      animation-delay: .15s;
+    }
+
+    &:after {
+      right: 0;
+    }
+  }
+}
+
+@keyframes stretchy {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(0) scaleX(2);
+  }
+  100% {
+    transform: translateX(100%) scaleX(1);
+  }
+}
+
+@keyframes stretchyRev {
+  0% {
+    transform: translateX(100%) scaleX(1);
+  }
+  50% {
+    transform: translateX(0) scaleX(2);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 50% {
+    transform: scaleX(1);
+  }
+  25%, 75% {
+    transform: scaleX(1.5);
+  }
+}
+
+// burger
+
+.hidden-menu {
+  display: block;
+  position: fixed;
+  list-style:none;
+  padding: 3em 6px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 8em;
+  background: linear-gradient(90deg, rgba(230,205,255,1) 0%, rgba(215,196,208,1) 35%, rgba(239,167,252,1) 100%);
+  height: 100%;
+  top: 0;
+  left: -8em;
+  transition: left .2s;
+  z-index: 2;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.hidden-menu-ticker {
+  display: none;
+}
+.hidden-menu li:hover{
+  text-decoration: underline;
+}
+
+.btn-menu {
+  color: #fff;
+  background-color: #383ae9;
+  padding: 5px;
+  position: fixed;
+  top: 1.6em;
+  left: 4em;
+  cursor: pointer;
+  transition: left .23s;
+  z-index: 3;
+  width: 35px;
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+.btn-menu span {
+  display: block;
+  height: 5px;
+  background: linear-gradient(90deg, rgba(230,205,255,1) 0%, rgba(215,196,208,1) 35%, rgba(239,167,252,1) 100%);
+  margin: 5px 0 0;
+  transition: all .1s linear .23s;
+  position: relative;
+}
+.btn-menu span.first {
+  margin-top: 0;
+}
+
+.hidden-menu-ticker:checked ~ .btn-menu {
+  left: 160px;
+}
+.hidden-menu-ticker:checked ~ .hidden-menu {
+  left: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
+  -webkit-transform: rotate(45deg);
+  top: 10px;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
+  opacity: 0;
+}
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
+  -webkit-transform: rotate(-45deg);
+  top: -10px;
+}
+
+
+.two {
+  text-align: center;
+}
+.two h1 {
+  color: #1E90FF;
+  text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
+  margin: 0;
+}
+

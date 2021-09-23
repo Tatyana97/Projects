@@ -1,0 +1,55 @@
+{
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": [
+      "airbnb-typescript/base",
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "no-plusplus": "off",
+      "no-console": "off",
+      "max-len": "off",
+      "indent": "off",
+      "@typescript-eslint/indent": ["warn", 2, {
+        "SwitchCase": 1
+      }],
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/no-unused-vars": "off",
+      "no-tabs": "off",
+      "@typescript-eslint/naming-convention": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/no-shadow": "off",
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "@typescript-eslint/no-unused-expressions": "off",
+      "eslint(func-names)": "off",
+      "eslint-disable func-names": "off",
+      "eslint-disable no-alert": "off",
+      "import/no-mutable-exports": "off",
+      "@typescript-eslint/no-use-before-define": "off",
+      "guard-for-in":"off",
+      "global-require":"off",
+      "func-names": 0,
+      "no-restricted-syntax":"off",
+      "linebreak-style":"off",
+
+      "import/prefer-default-export": "off",
+
+      "no-param-reassign": ["error", {
+        "props": false
+      }]
+    },
+    "ignorePatterns": ["*config.js"]
+  }

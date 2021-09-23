@@ -1,0 +1,119 @@
+//start game
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
+.active{
+display: block;
+}
+.start-btn {
+display: none;
+width: 220px;
+height: 50px;
+border: none;
+outline: none;
+color: #fff;
+background: #111;
+cursor: pointer;
+position: relative;
+z-index: 0;
+border-radius: 10px;
+}
+
+.start-btn:before {
+content: '';
+background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+position: absolute;
+top: -2px;
+left:-2px;
+background-size: 400%;
+z-index: -1;
+filter: blur(5px);
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+animation: glowing 20s linear infinite;
+opacity: 0;
+transition: opacity .3s ease-in-out;
+border-radius: 10px;
+}
+
+.start-btn:active {
+color: #000
+}
+
+.start-btn:active:after {
+background: transparent;
+}
+
+.start-btn:hover:before {
+opacity: 1;
+}
+
+.start-btn:after {
+z-index: -1;
+content: '';
+position: absolute;
+width: 100%;
+height: 100%;
+background: #383ae9;
+left: 0;
+top: 0;
+border-radius: 10px;
+}
+
+@keyframes glowing {
+0% { background-position: 0 0; }
+50% { background-position: 400% 0; }
+100% { background-position: 0 0; }
+}
+
+.repeat-btn{
+display: none;
+}
+
+// stars
+.rating {
+top: 0;
+display: flex;
+justify-content: flex-end;
+box-sizing: border-box;
+width: calc(100% - 40px);
+height: 43px;
+margin: 0 auto;
+margin-left: 25px;
+padding: 0;
+overflow: hidden;
+}
+
+.starWin{
+width: 35px;
+height: 35px;
+background: url('../../assets/img/star-win.svg');
+background-size: cover;
+}
+.starLoozer{
+width: 35px;
+height: 35px;
+background: url('../../assets/img/star.svg');
+background-size: cover;
+}
+
+//game over
+.gameOver {
+display: flex;
+justify-content: center;
+}
+.game-over{
+width: 15.4em;
+height: 12.6em;
+background: url('../../assets/img/success.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}
+.failure{
+width: 15.4em;
+height: 12.6em;
+background: url('../../assets/img/failure.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+}

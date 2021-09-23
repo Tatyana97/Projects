@@ -1,0 +1,129 @@
+* {box-sizing: border-box; }
+a {
+  text-decoration: none;
+  color: #8A2BE2;
+ }
+#grid-container {
+  display: grid;
+  height: 15em;;
+  grid-template-columns: 10em 10em 10em 10em;
+  grid-template-rows: 7em 7em;
+  list-style-type: none;
+  justify-content: center;
+  align-content: center;
+  grid-gap: 1.7em 1em;
+}
+#grid-container > li {
+  background: linear-gradient(90deg, #b9deed, #efefef);
+  margin: 2px;
+  padding: 10px;
+  border: 10px solid skyblue;
+  border-image: linear-gradient(21deg, #dd03e4, #5611ec);
+  border-image-slice: 1;
+  width: 100%;
+  height: 117%;
+}
+.mainBlock{
+display: flex;
+justify-content: center;
+}
+
+img.fit-picture {
+  height: 4em;
+  width: 5em;
+  position: relative;
+  left: 2em;
+  border-radius: 40%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+//page
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient( 90deg, #aea4e3, #d3ffe8);
+  width: 100%;
+  height: 1.3em;
+  position: relative;
+  top: -0.3em;
+}
+
+.hidden{
+  display: none;
+}
+
+.setActiv{
+  color: #1E90FF;
+  text-shadow: -1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white, 0 0 8px white, 0 0 8px white, 0 0 8px white, 2px 2px 3px black;
+  }
+
+  .wrap{
+    position: relative;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .clicker{
+    background-color: white;
+    outline: none;
+    font-weight: 600;
+    position: absolute;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    height: 32px;
+    width: 38px;
+    left: 6px;
+    top: 7px;
+    border-radius: 100px;
+    z-index: 2;
+    color: #1E90FF;
+  }
+
+  .clicker:active{
+      transform: translate(0, 1px);
+    height: 63px;
+      box-shadow: 0px 1px 0 0 rgb(190,190,190) inset;
+         height: 34px;
+    width: 42px;
+    left: 7px;
+    top: 6px;
+  }
+
+  .circle{
+    position: relative;
+    border-radius: 40px;
+    top: 2px;
+    width: 47px;
+    height: 41px;
+    z-index: 1;
+  }
+
+  .circle.third{
+    border-radius: 0;
+  }
+
+  .clicker.faster:hover + .circle, .clicker.faster:active + .circle {
+      animation: rotator linear .4s infinite;
+  }
+
+  .clicker.fast:hover + .circle, .clicker.fast:active + .circle {
+      animation: rotator linear .5s infinite;
+  }
+
+  .clicker:hover + .circle, .clicker:active + .circle {
+      animation: rotator linear .8s infinite;
+  }
+
+  @keyframes rotator{
+      from{ transform: rotate(0deg); }
+      to{ transform: rotate(360deg); }
+  }
+
+
